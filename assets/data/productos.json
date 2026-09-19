@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mortal Kombat 1",
+    "categoria": "Lucha",
+    "precio": 49990,
+    "imagen": "assets/img/mortal-kombat.jpg",
+    "descripcion": "Juego de lucha con combates intensos y una nueva historia en el universo de Mortal Kombat."
+  },
+  {
+    "id": 2,
+    "nombre": "Minecraft",
+    "categoria": "Aventura y construcción",
+    "precio": 29990,
+    "imagen": "assets/img/minecraft.jpg",
+    "descripcion": "Videojuego de aventura y construcción donde puedes explorar y crear mundos libremente."
+  },
+  {
+    "id": 3,
+    "nombre": "EA Sports FC 26",
+    "categoria": "Deportes",
+    "precio": 59990,
+    "imagen": "assets/img/fc26.jpg",
+    "descripcion": "Videojuego de fútbol que permite competir con clubes y jugadores de distintas ligas del mundo."
+  }
+]

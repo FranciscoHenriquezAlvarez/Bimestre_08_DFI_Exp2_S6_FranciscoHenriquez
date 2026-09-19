@@ -1,0 +1,440 @@
+/* ========================================
+   VARIABLES GENERALES
+======================================== */
+
+:root {
+    --color-principal: #111827;
+    --color-secundario: #dc2626;
+    --color-fondo: #f3f4f6;
+    --color-tarjeta: #ffffff;
+    --color-texto: #1f2937;
+    --color-claro: #ffffff;
+    --color-borde: #d1d5db;
+    --color-destacado: #16a34a;
+    --color-enlace: #fbbf24;
+    --sombra-tarjeta: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.10);
+}
+
+/* ========================================
+   CONFIGURACIÓN GENERAL Y MODELO DE CAJAS
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor {
+    width: min(68.75rem, 92%);
+    margin: 0 auto;
+}
+
+/* Foco visible para navegación mediante teclado */
+a:focus-visible,
+button:focus-visible {
+    outline: 0.1875rem solid var(--color-enlace);
+    outline-offset: 0.1875rem;
+}
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.encabezado-principal {
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    text-align: center;
+    padding: 2.5rem 1.25rem;
+    border-bottom: 0.3125rem solid var(--color-secundario);
+}
+
+.encabezado-principal h1 {
+    margin: 0;
+    font-size: 2.625rem;
+}
+
+.encabezado-principal p {
+    margin: 0.625rem 0 0;
+    font-size: 1.125rem;
+}
+
+/* ========================================
+   CONTENIDO PRINCIPAL
+======================================== */
+
+.contenido-principal {
+    margin: 1.875rem auto;
+    padding: 1.25rem 0;
+}
+
+.seccion-productos h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    margin: 0 0 1.875rem;
+}
+
+/* ========================================
+   TARJETAS DE PRODUCTOS
+======================================== */
+
+.producto {
+    background-color: var(--color-tarjeta);
+    padding: 1.25rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 0.625rem;
+    text-align: center;
+    box-shadow: var(--sombra-tarjeta);
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.producto h3 {
+    color: var(--color-principal);
+    font-size: 1.375rem;
+    margin: 0 0 0.9375rem;
+}
+
+.producto img {
+    width: 100%;
+    max-width: 15.625rem;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid var(--color-borde);
+    border-radius: 0.5rem;
+}
+
+.producto p {
+    margin: 0.9375rem 0 0;
+    text-align: left;
+}
+
+/* Producto visualmente destacado */
+.producto-destacado {
+    border: 2px solid var(--color-destacado);
+}
+
+/* Subraya los títulos de los productos en posiciones impares.
+   nth-child(odd) selecciona los article dentro de la fila:
+   en el catálogo actual, el primero y el tercero. */
+#productos > .row > article:nth-child(odd) .producto h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25rem;
+}
+
+.producto:hover {
+    border-color: var(--color-secundario);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1.125rem rgba(0, 0, 0, 0.14);
+}
+
+/* ========================================
+   PIE DE PÁGINA - FLEXBOX
+======================================== */
+
+.pie-pagina {
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    padding: 1.875rem 1.25rem;
+    margin-top: 2.5rem;
+    border-top: 0.3125rem solid var(--color-secundario);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.875rem;
+    flex-wrap: wrap;
+}
+
+.pie-pagina section {
+    flex: 1 1 17.5rem;
+    text-align: center;
+}
+
+.pie-pagina h2 {
+    margin: 0 0 0.625rem;
+}
+
+.titulo-redes {
+    font-size: 1.25rem;
+}
+
+.pie-pagina a {
+    color: var(--color-enlace);
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.redes a {
+    padding: 0.5rem 0.9375rem;
+    border: 1px solid var(--color-enlace);
+    border-radius: 0.3125rem;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.redes a:hover,
+.redes a:focus-visible {
+    background-color: var(--color-enlace);
+    color: var(--color-principal);
+}
+
+/* ========================================
+   CARRUSEL BOOTSTRAP
+======================================== */
+
+.seccion-carrusel {
+    background-color: var(--color-principal);
+    padding: 1.25rem 0;
+}
+
+#carruselPrincipal {
+    width: min(68.75rem, 92%);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    background-color: #202938;
+}
+
+#carruselPrincipal .carousel-item {
+    background-color: #202938;
+}
+
+#carruselPrincipal .carousel-item img {
+    width: 100%;
+    height: 28rem;
+    object-fit: contain;
+    background-color: #202938;
+}
+
+#carruselPrincipal .carousel-control-prev,
+#carruselPrincipal .carousel-control-next {
+    width: 10%;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO
+   Tablet: hasta 768 px
+======================================== */
+
+@media (max-width: 768px) {
+    #carruselPrincipal .carousel-item img {
+        height: 20rem;
+    }
+
+    .encabezado-principal h1 {
+        font-size: 2.125rem;
+    }
+
+    .footer-contenido {
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   DISEÑO RESPONSIVO
+   Móvil: hasta 480 px
+======================================== */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9375rem;
+    }
+
+    #carruselPrincipal .carousel-item img {
+        height: 15rem;
+    }
+
+    .encabezado-principal {
+        padding: 1.875rem 1rem;
+    }
+
+    .encabezado-principal h1 {
+        font-size: 1.875rem;
+    }
+
+    .encabezado-principal p {
+        font-size: 1rem;
+    }
+
+    .contenido-principal {
+        margin: 1.25rem auto;
+        padding: 0.625rem 0;
+    }
+
+    .seccion-productos h2 {
+        font-size: 1.625rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .producto {
+        padding: 1.125rem;
+    }
+
+    .producto:hover {
+        transform: none;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+}
+/* ========================================
+   SEMANA 6: CATÁLOGO, BÚSQUEDA Y CARRITO
+======================================== */
+
+#catalogo h2,
+#carrito h2,
+#categorias h2,
+#consultas h2 {
+    color: var(--color-principal);
+}
+
+.precio-producto {
+    color: var(--color-secundario);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.categoria-producto {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+#lista-productos .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-productos .btn-agregar {
+    margin-top: auto;
+}
+
+#lista-carrito .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (max-width: 480px) {
+    #lista-carrito .list-group-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* Controles de cantidad incorporados en la evolución de Semana 6. */
+.fila-carrito {
+    display: grid !important;
+    grid-template-columns: minmax(12rem, 1fr) auto minmax(6rem, auto);
+    align-items: center;
+    gap: 1rem;
+}
+
+.controles-carrito {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cantidad-carrito {
+    min-width: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.subtotal-carrito {
+    text-align: right;
+}
+
+@media (max-width: 576px) {
+    .fila-carrito {
+        grid-template-columns: 1fr auto;
+    }
+
+    .nombre-carrito {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* Ajustes finales de presentación de Semana 6. */
+#lista-productos .producto {
+    padding: 1rem;
+}
+
+#lista-productos .producto img {
+    max-height: 18rem;
+    object-fit: contain;
+}
+
+#lista-productos .card-body {
+    padding: 1rem 0.5rem 0.25rem;
+}
+
+#lista-productos .card-text {
+    margin-bottom: 0.75rem;
+}
+
+#lista-productos .precio-producto {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.cabecera-carrito {
+    display: grid;
+    grid-template-columns: minmax(12rem, 1fr) auto minmax(6rem, auto);
+    gap: 1rem;
+    padding: 0.6rem 1rem;
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    border-radius: 0.375rem 0.375rem 0 0;
+    font-weight: 700;
+}
+
+.cabecera-carrito span:nth-child(2) {
+    text-align: center;
+}
+
+.cabecera-carrito span:last-child {
+    text-align: right;
+}
+
+@media (max-width: 576px) {
+    .cabecera-carrito {
+        display: none !important;
+    }
+}

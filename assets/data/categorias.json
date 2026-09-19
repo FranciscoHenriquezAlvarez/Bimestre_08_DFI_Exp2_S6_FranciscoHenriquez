@@ -1,0 +1,17 @@
+[
+    {
+        "nombre": "Lucha",
+        "descripcion": "Combates y desafíos para poner a prueba tus habilidades.",
+        "ejemplo": "Mortal Kombat 1"
+    },
+    {
+        "nombre": "Aventura y construcción",
+        "descripcion": "Mundos para explorar, crear y transformar.",
+        "ejemplo": "Minecraft"
+    },
+    {
+        "nombre": "Deportes",
+        "descripcion": "Competencias y partidos para disfrutar del fútbol.",
+        "ejemplo": "EA Sports FC 26"
+    }
+]
