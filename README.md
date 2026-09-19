@@ -1,7 +1,5 @@
 # 🎮 Mortal Store - Actividad Sumativa Semana 6
 
-Proyecto desarrollado para la asignatura **Desarrollo Frontend I (PFY2201)**, correspondiente a la **Actividad Sumativa de la Semana 6: Optimización de la lógica y rendimiento de una página web con JavaScript**.
-
 El proyecto corresponde a la evolución de **Mortal Store**, una tienda web de videojuegos desarrollada utilizando **HTML5, CSS3, Bootstrap 5 y JavaScript**, incorporando manipulación dinámica del DOM, eventos, búsqueda de productos, filtros por categorías, carrito de compras y carga de datos mediante Fetch API.
 
 ---
