@@ -1,18 +1,8 @@
-# 🎮 Mortal Store - Actividad Sumativa Semana 6
+# 🎮 Mortal Store
+
+Proyecto desarrollado progresivamente para la asignatura Desarrollo Frontend I (PFY2201).
 
 El proyecto corresponde a la evolución de **Mortal Store**, una tienda web de videojuegos desarrollada utilizando **HTML5, CSS3, Bootstrap 5 y JavaScript**, incorporando manipulación dinámica del DOM, eventos, búsqueda de productos, filtros por categorías, carrito de compras y carga de datos mediante Fetch API.
-
----
-
-## 👤 Información del estudiante
-
-- **Estudiante:** Francisco Henríquez
-- **Asignatura:** Desarrollo Frontend I
-- **Código:** PFY2201
-- **Carrera:** Desarrollo de Aplicaciones
-- **Semana:** 6
-- **Actividad:** Actividad Sumativa
-- **Docente:** Marcelo Zepeda
 
 ---
 
